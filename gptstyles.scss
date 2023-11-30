@@ -1,0 +1,64 @@
+/*-- scss:defaults --*/
+
+// Color Palette
+$primary-color: #FFD700; // Yellow
+$secondary-color: #0000FF; // Blue
+$text-color: #333; // Dark Gray
+
+// Font Sizes
+$base-font-size: 16px;
+$small-font-size: $base-font-size * 0.8;
+$large-font-size: $base-font-size * 1.2;
+
+/*-- scss:rules --*/
+
+// Header Styles
+$heading-color: $primary-color;
+$h1-font-size: $large-font-size;
+$h2-font-size: $large-font-size;
+$h3-font-size: $large-font-size;
+$h4-font-size: $base-font-size;
+$h5-font-size: $base-font-size;
+$h6-font-size: $base-font-size;
+
+// Body Styles
+$body-font-size: $base-font-size;
+
+// Apply Styles
+body {
+  font-family: "Arial", sans-serif;
+  font-size: $body-font-size;
+  color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $heading-color;
+}
+
+h1 {
+  font-size: $h1-font-size;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+
+/*-- scss:mixins --*/
+/*-- scss:functions --*/
+/*-- scss:uses --*/

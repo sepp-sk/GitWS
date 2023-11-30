@@ -1,0 +1,242 @@
+---
+title: "Git(Hub) Workshop for ecologists"
+author: "Diego P.F. Trindade"
+date: "today"
+format: 
+  revealjs:
+    width: 1600
+    height: 900
+    slide-number: false
+    chalkboard: true
+    theme: ["dark", "styles.scss"]
+    echo: true
+    multiplex: true
+    code-link: true
+    code-copy: true
+    auto-play-media: false
+    preview-links: auto
+    title-slide-attributes:
+      #data-background-color: "#447099"
+      data-background-image: ../images/matrix.png
+      data-background-opacity: "0.25"
+editor: source
+---
+
+# [Reproducibility and Version Control]{style="color:yellow;"} {background-image="./images/reprod.jpeg" background-opacity="0.2"}
+
+::: footer
+::: {style="text-align:right;"}
+[Illustration: Robert Neubecker](https://www.science.org/doi/10.1126/science.354.6308.142)
+:::
+:::
+
+## I use R + DropBox, why should I care?
+
+::: columns
+::: {.column width="20%"}
+:::
+
+::: {.column width="80%"}
+<br><br> <iframe src="https://giphy.com/embed/pPhyAv5t9V8djyRFJH" width="880" height="550" frameBorder="1" class="giphy-embed" allowFullScreen></iframe>
+<p><a href="https://giphy.com/gifs/wtf-obama-wth-pPhyAv5t9V8djyRFJH"></a></p>
+:::
+:::
+
+## Something like this can happen
+
+![](./images/files-comics.gif){.absolute top="200" left="350" width="850" height="600"}
+
+## Veryfinal_Version2
+
+![](./images/phd-comics-version-control.png){fig-align="center"}
+
+## Git(Hub) in a nutshell {background-image="./images/git-commit.png" background-opacity="0.15"}
+
+::: columns
+::: {.column width="10%"}
+![](https://git-scm.com/images/logos/downloads/Git-Logo-1788C.svg){.absolute top="180" left="0" width="200" height="250"}
+
+![](./images/github-mark-white.png){.absolute bottom="250" left="40" width="150" height="150"}
+:::
+
+::: {.column width="7%"}
+:::
+
+::: {.column width="65%"}
+<br><br><br>
+
+Git is a version control software that **tracks changes** to your files over time.
+
+<br><br><br>
+
+Github is a website for your git-versioned files.
+:::
+
+::: {.column width="15%"}
+
+::: footer
+::: {style="text-align:right;"}
+[Illustration: Alisson Horst](https://allisonhorst.com/git-github)
+:::
+:::
+
+:::
+:::
+
+
+# [Let's make a quick tour]{style="color:#C8F526;"} {background-image="./images/workflow.png" background-opacity="0.3"} 
+
+::: footer
+::: {style="text-align:right;"}
+[Illustration: Alisson Horst](https://allisonhorst.com/git-github)
+:::
+:::
+
+
+## How does Git work?
+
+
+![](./images/basic-git.jpeg){fig-align="center"}
+
+## How does Git work?
+
+
+![](./images/versions.png){fig-align="center"}
+
+
+
+------------------------------------------------------------------------
+
+{{< video https://www.youtube.com/watch?v=s3JldKoA0zw&t=4s&ab_channel=HomerWhite start="4" width="100%" height="100%" >}}
+
+## Why Git + RStudio?
+
+- Most ecologists use R
+
+- RStudio has an easy and connected interface with GitHub
+
+- Repository/Projects
+
+## Git can be played as a Single or Multiplayer
+
+- Chrono trigger
+- Tibia
+
+## Using Git as a single player
+
+- You manage your projects alone
+
+- You commit, push and pull your own changes
+
+- It is still fun!
+
+- Check some old projects
+
+## Let's see how it works in practice
+
+- Creating new projects in GitHub
+
+- Connecting this project in RStudio
+
+- This can be done in different ways
+
+- From GitHub to RStudio
+
+- From local computer to GitHub
+
+
+## From GitHub to RStudio
+
+- Super easy, if both are connected
+
+## From local to Git
+
+- Let's say you already have a project and wants to send it to Git
+
+- Create a local repository
+
+
+## Someone made a nice repository and I want to use it
+
+- Clone 
+
+
+## Difference between clone and ..
+
+
+
+## Improving someones project
+
+- Issues, Fetch
+
+
+## Issues can appear!
+
+- You can use/manage your projects using different computers
+
+- Push/Pull issues
+
+- **Make a new project and add a colleague on it; as him/her to change the file and push it.**
+
+
+## Why does that happen?
+
+- Explain the branch's idea
+
+## Simple rules/commands to save your life
+
+::: {.fragment}
+#### "Always PULL first!"
+:::
+
+- git stash
+
+- git HEAD~soft
+
+- git status
+
+
+## I made something super wrong, how to go back on time?
+
+
+
+## Git allow us to test new things safely
+
+
+- Explain the branch's idea
+
+
+## Collaborative git
+
+- The most exciting but challenging one
+
+::: {.fragment}
+#### "Always PULL first!"
+:::
+
+![](./images/GitHub-diagram.jpeg){fig-align="center"}
+
+## Different strategies can be applied
+
+- Don't touch my file/folder! (simplest one)
+
+- Use branches and merge them afterwards
+
+
+
+## Collaborative git
+
+![](./images/branch-merge.png){fig-align="center"}
+
+
+
+
+## Sources
+
+- How to connect Git and RStudio: [Happy Git With R](https://happygitwithr.com/index.html)
+
+- How to solve the most common issues: [Oh Shit Git!](https://ohshitgit.com/)
+
+- Important notes: [click here](https://raw.githack.com/uo-ec607/lectures/master/02-git/02-Git.html#1)
+
+- How to collaborate on Rstudio with Git: [click here](https://jtr13.github.io/cc21/collaborating-on-rstudio-with-github.html)
