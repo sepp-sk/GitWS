@@ -1,0 +1,98 @@
+---
+title: "trash"
+format: html
+editor: visual
+---
+
+
+
+## Git is totally integrated with R {background-image="./images/sisyphus.jpeg" background-opacity="0.2"}
+
+### (some effort needed)
+
+<br>
+
+::: panel-tabset
+### First Step
+
+#### Windows
+
+-   Download [R](https://cran.r-project.org/bin/windows/base/) and [RStudio](https://posit.co/products/open-source/rstudio/)
+
+-   Register a [GitHub](https://github.com/) account
+
+-   Install [Git](https://git-scm.com/downloads)
+
+-   [GitHub Desktop](https://desktop.github.com/) - Optional
+
+#### Mac
+
+```{r eval=FALSE}
+#| class-output: big-code
+#| 
+$ git --version
+
+$ git config
+
+```
+
+### Second Step
+
+<br>
+
+#### Personal Access Token (PAT):
+
+-   Go to <https://github.com/settings/tokens> and click "Generate token".
+
+-   Or using the `usethis` package:
+
+```{r eval=FALSE}
+
+## install if needed:
+## install.packages("usethis")
+
+usethis::create_github_token()
+
+```
+
+<br>
+
+#### Paste your PAT into the Git credential store
+
+```{r eval=FALSE}
+gitcreds::gitcreds_set()
+
+```
+
+### Third Step
+
+#### Tell git who you are:
+
+Command line
+
+```{r eval=FALSE}
+
+git config --global user.name 'diegoxx'
+git config --global user.email 'diego@example.xx'
+git config --global --list
+
+```
+
+Or:
+
+```{r eval=FALSE}
+
+
+usethis::use_git_config(user.name = "diegoxx", user.email = "diego@example.xx")
+
+
+```
+:::
+
+# [You are now ready to go]{style="color:#F4BA02;"} {background-image="./images/git-factory.png" background-opacity="0.3"} 
+
+::: footer
+::: {style="text-align:right;"}
+[Illustration: Alisson Horst](https://allisonhorst.com/git-github)
+:::
+:::
