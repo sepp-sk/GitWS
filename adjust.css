@@ -1,0 +1,14 @@
+/* Increase space between lines in bullet points */
+  ul {
+    line-height: 3.5; /* Adjust this value to increase or decrease the space */
+    font-size: 42px; 
+  }
+  
+
+/* Increase space below H1 and H2 headings */
+h1, h2, h3 {
+  margin-bottom: 60px; /* Adjust this value to increase or decrease the space */
+}
+
+
+
