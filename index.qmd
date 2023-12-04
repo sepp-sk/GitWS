@@ -1,5 +1,5 @@
 ---
-title: "Git(Hub) Workshop for ecologists"
+title: "Git(Hub) for ecologists"
 author: "Diego P.F. Trindade"
 date: "today"
 format: 
@@ -17,38 +17,52 @@ format:
     preview-links: auto
     title-slide-attributes:
       #data-background-color: "#447099"
-      data-background-image: ../images/matrix.png
-      data-background-opacity: "0.25"
+      data-background-image: "./images/ut_logo.svg, ./images/macroeco_logo.png"
+      data-background-size: 70px, 150px, cover
+      data-background-position: "2% 2%, 98% 5%, center"
 editor: source
 ---
 
-# [Reproducibility and Version Control]{style="color:yellow;"} {background-image="./images/reprod.jpeg" background-opacity="0.2"}
+# [Laelatu meeting: <br>Macroecological data and data science]{style="color:#C8F526;font-size:86px"} {background-image="./images/springWG.jpeg" background-opacity="0.3"}
 
-::: footer
-::: {style="text-align:right;"}
-[Illustration: Robert Neubecker](https://www.science.org/doi/10.1126/science.354.6308.142)
-:::
-:::
 
-## I use R + DropBox, why should I care?
 
-::: columns
-::: {.column width="20%"}
-:::
+## Before we start..
+<br>
 
-::: {.column width="80%"}
-<br><br> <iframe src="https://giphy.com/embed/pPhyAv5t9V8djyRFJH" width="880" height="550" frameBorder="1" class="giphy-embed" allowFullScreen></iframe>
-<p><a href="https://giphy.com/gifs/wtf-obama-wth-pPhyAv5t9V8djyRFJH"></a></p>
-:::
-:::
+### A brief checklist:
 
-## Something like this can happen
+<br>
 
-![](./images/files-comics.gif){.absolute top="200" left="350" width="850" height="600"}
+1 - Everyone has a github account
 
-## Veryfinal_Version2
+- Please log into your github account and fill your username in our list
 
-![](./images/phd-comics-version-control.png){fig-align="center"}
+2 -  RStudio and Git are connected
+
+- If not:
+
+<br>
+
+```
+usethis::use_git_config(user.name = "diegoxx", user.email = "diego@example.xx")
+
+usethis::create_github_token()
+
+#Copy your PAT
+
+#Run the following line and paste it:
+
+gitcreds::gitcreds_set()
+
+```
+
+
+
+## Not an advanced course
+
+![](./images/gitmeme.png){.absolute top="100" left="450" width="650" height="1800"}
+
 
 ## Git(Hub) in a nutshell {background-image="./images/git-commit.png" background-opacity="0.15"}
 
@@ -73,37 +87,53 @@ Github is a website for your git-versioned files.
 :::
 
 ::: {.column width="15%"}
-
 ::: footer
 ::: {style="text-align:right;"}
 [Illustration: Alisson Horst](https://allisonhorst.com/git-github)
 :::
 :::
-
 :::
 :::
 
 
-# [Let's make a quick tour]{style="color:#C8F526;"} {background-image="./images/workflow.png" background-opacity="0.3"} 
+## I use R + DropBox, why should I care?
+
+::: columns
+::: {.column width="20%"}
+:::
+
+::: {.column width="80%"}
+<br><br> <iframe src="https://giphy.com/embed/pPhyAv5t9V8djyRFJH" width="880" height="550" frameBorder="1" class="giphy-embed" allowFullScreen></iframe>
+
+<p><a href="https://giphy.com/gifs/wtf-obama-wth-pPhyAv5t9V8djyRFJH"></a></p>
+:::
+:::
+
+## Something like this can happen
+
+![](./images/files-comics.gif){.absolute top="200" left="350" width="850" height="600"}
+
+## Veryfinal_Version2
+
+![](./images/phd-comics-version-control.png){fig-align="center"}
+
+
+
+# [Reproducibility and Version Control]{style="color:yellow;"} {background-image="./images/reprod.jpeg" background-opacity="0.2"}
 
 ::: footer
 ::: {style="text-align:right;"}
-[Illustration: Alisson Horst](https://allisonhorst.com/git-github)
+[Illustration: Robert Neubecker](https://www.science.org/doi/10.1126/science.354.6308.142)
 :::
 :::
-
 
 ## How does Git work?
-
 
 ![](./images/basic-git.jpeg){fig-align="center"}
 
 ## How does Git work?
 
-
 ![](./images/versions.png){fig-align="center"}
-
-
 
 ------------------------------------------------------------------------
 
@@ -111,132 +141,358 @@ Github is a website for your git-versioned files.
 
 ## Why Git + RStudio?
 
-- Most ecologists use R
+-   Most ecologists use R
 
-- RStudio has an easy and connected interface with GitHub
+-   RStudio has an easy and connected interface with GitHub
 
-- Repository/Projects
+-   Repository/Projects
 
-## Git can be played as a Single or Multiplayer
+- GitHub act as a "preprint" for R packages
 
-- Chrono trigger
-- Tibia
 
-## Using Git as a single player
+## GitHub potential drawbacks
 
-- You manage your projects alone
+- Allows files up to 100mb
 
-- You commit, push and pull your own changes
+- Simultaneous changes can be problematic
 
-- It is still fun!
+- It can be like doing a PhD: 
 
-- Check some old projects
+*At the beginning you have no idea what is going on, but at some point you get it*
+
+
+# [Let's make a quick tour]{style="color:#C8F526;"} {background-image="./images/workflow.png" background-opacity="0.3"}
+
+::: footer
+::: {style="text-align:right;"}
+[Illustration: Alisson Horst](https://allisonhorst.com/git-github)
+:::
+:::
+
+## Git can be used by yourself or as a team
+
+
+## Introvert git user (myself)
+
+-   You manage your projects alone
+
+-   You commit, push and pull your own changes
+
+-   It is still fun!
+
+-   Check some old projects
 
 ## Let's see how it works in practice
 
-- Creating new projects in GitHub
+-   Creating new projects in GitHub
 
-- Connecting this project in RStudio
+-   Connecting this project to RStudio
 
-- This can be done in different ways
+-   This can be done in different ways:
 
-- From GitHub to RStudio
+-   From GitHub to RStudio
 
-- From local computer to GitHub
+-   From local computer to GitHub
 
+-   Using command line
 
 ## From GitHub to RStudio
 
-- Super easy, if both are connected
+-   Super easy, if both are connected
+
+- README, gitignore,
+
 
 ## From local to Git
 
-- Let's say you already have a project and wants to send it to Git
+-   Let's say you already have a project and wants to send it to Git
 
-- Create a local repository
+-   Create a local repository
+
+## From command line
+
+```
+create a repository on github
+
+go to the terminal and choose your folder (cd path)
+
+git init
+git remote add origin <repolink>
+git add .
+git commit -m "first commit"
+git push -u origin main
+
+```
+
+## First GitHub's power - Version control
+
+- Create new files, edit them, commit and push
+
+## 1st task - let's create our first test project
+
+- I recommend using the first strategy: Clone from GitHub to RStudio
+
+- README; .gitignore
+
+- Create some fake scripts, edit them, commit and push
+
+- Repeat this process and check what happens
+
+## Git pannel labels
+
+stage,
+untracked,
+deleted,
+merged
 
 
-## Someone made a nice repository and I want to use it
+## Someone created a nice repository and I wanna use it
 
-- Clone 
+- A nice strategy to learn new things
 
+- Very nice when reviewing papers that use GitHub!
 
-## Difference between clone and ..
+## 2nd task
 
+- Let's try to Clone a random nice project on GitHub.
 
+- Now, make any change to this project, commit and try to push it
 
-## Improving someones project
+::: fragment
 
-- Issues, Fetch
+::: {style="font-size:48px"}
 
+::: {.callout-warning}
+A wild error appeared!
 
-## Issues can appear!
+::: 
+::: 
+::: 
 
-- You can use/manage your projects using different computers
+## Clone and Fork
 
-- Push/Pull issues
+- Clone: Cloning creates a local version of the original repository;
 
-- **Make a new project and add a colleague on it; as him/her to change the file and push it.**
+- Fork: creates a copy of the repository on your GitHub (which you can then clone)
 
+::: fragment
 
-## Why does that happen?
+- Let's now try to fork the same repository
 
-- Explain the branch's idea
-
-## Simple rules/commands to save your life
-
-::: {.fragment}
-#### "Always PULL first!"
 :::
 
-- git stash
+## 3rd task - Create a project you are currently working on
 
-- git HEAD~soft
-
-- git status
+- Create a repository on GitHub and new project on RStudio and play a bit with it
 
 
-## I made something super wrong, how to go back on time?
+::: fragment
+
+::: {.callout-tip}
 
 
+::: {style="font-size:36px"}
 
-## Git allow us to test new things safely
+If you have large data files:
 
+:::
 
-- Explain the branch's idea
+<br>
+
+- You can try using .RData, .RDS or zip files instead (if they don't exceed 100mb);
+
+<br>
+
+- Or even, you can use large files locally and .gitignore them!
+
+:::
+:::
 
 
 ## Collaborative git
 
-- The most exciting but challenging one
+-   The most exciting but challenging one
 
-::: {.fragment}
+::: fragment
 #### "Always PULL first!"
 :::
 
 ![](./images/GitHub-diagram.jpeg){fig-align="center"}
 
-## Different strategies can be applied
+## Issues can/will appear! Merge conflicts!
 
-- Don't touch my file/folder! (simplest one)
 
-- Use branches and merge them afterwards
+<iframe src="https://giphy.com/embed/MCZ39lz83o5lC" width="1080" height="850" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/MCZ39lz83o5lC"></a></p>
 
 
 
 ## Collaborative git
 
+-   You can use/manage your projects using different computers/collaborators
+
+-   Push/Pull issues
+
+## 4th task - dealing with some issues
+
+<br>
+
+### 1st issue:
+
+<br>
+
+- Go to GitHub, open your first project and invite a collaborator (person next to you)
+
+- **ask him/her to change a file and push it.**
+
+- Now, don't pull the changes and try to make new changes to the same file and commit/push the same script yourself.
+
+
+## Why?
+
+- This happens when we try to change a pushed file without pulling it
+
+::: fragment
+
+::: {.callout-important}
+
+::: {style="font-size:42px"}
+
+**Always PULL first!**
+:::
+
+:::
+
+:::
+
+## 4th task - dealing with some issues
+
+<br>
+
+### 2nd issue (still easy one):
+
+<br>
+
+- **ask your collaborator to change a file and "forget" to commit or push it**
+
+- Change yourself the same file (either add or remove anything), commit and push it.
+
+- Ask your collaborator to commit and push his/her changes.
+
+
+## 4th task - dealing with some issues
+
+3rd issue (quite annoying one):
+
+- **ask your collaborator to change a file, commit this change and "forget" to push it**
+
+- Pull the changes as usual (nothing will happen, everything seems fine)
+
+- Change the same file yourself (either add or remove anything), commit and push it.
+
+- Ask your collaborator to push his/her changes after that.
+
+## Most issues can be solved with "Pull"
+
+- Sometimes not though
+
+- [Oh Shit Git!](https://ohshitgit.com/), [StackOverflow](https://stackoverflow.com/) and [ChatGPT](https://openai.com/blog/chatgpt) are our friends
+
+
+## Most importantly: Git allow us to test new things safely
+
 ![](./images/branch-merge.png){fig-align="center"}
+
+
+## Let's try some branch approaches
+
+- Branches can be viewed as experiments
+
+- New feature: Pull request
+
+
+
+## Issues + Pull request
+
+- This is how data science is being pushed forward
+
+
+## Group task
+
+- 5 groups of 4
+
+- 5 different repositories/datasets
+
+
+
+## 1st Group task
+
+- Let's explore the data, make changes, commit and push
+
+- Each person changes a specific script (no overlap!)
+
+- You can either communicate saying when you pushed so the other person can pull the changes
+
+- You can also choose not saying anything.
+
+- All collaborators, change, commit and push their changes and resolve the conflicts (which will be solved simply by pulling)
+
+
+
+## 2nd Group task
+
+- Let's continue making changes but now using branches.
+
+- Each person creates a branch with his/her name
+
+- Let's keep working each person in a different script
+
+- Make changes and pull requests
+
+
+
+## 3rd Group task
+
+- Let's try to create some conflict and learn how to solve them.
+
+- Now, two persons will work on the same script
+
+- To make things less complicated, each person changes a simple thing (e.g. the label of a plot)
+
+- They push and try to pull request their changes (and solve the conflicts that will appear)
+
+
+## 4th Group task
+
+- Let's create issues and ask collaborators to solve them.
+
+- Remember to use the # linked to the issue
+
+
+
+# Additional tips 
+
+## Simple rules/commands to save your life
+
+::: fragment
+#### "Always PULL first!"
+:::
+
+-   git stash
+
+-   git HEAD\~soft
+
+-   git status
+
 
 
 
 
 ## Sources
 
-- How to connect Git and RStudio: [Happy Git With R](https://happygitwithr.com/index.html)
+-   How to connect Git and RStudio: [Happy Git With R](https://happygitwithr.com/index.html)
 
-- How to solve the most common issues: [Oh Shit Git!](https://ohshitgit.com/)
+-   How to solve the most common issues: [Oh Shit Git!](https://ohshitgit.com/)
 
-- Important notes: [click here](https://raw.githack.com/uo-ec607/lectures/master/02-git/02-Git.html#1)
+-   Important notes: [click here](https://raw.githack.com/uo-ec607/lectures/master/02-git/02-Git.html#1)
 
-- How to collaborate on Rstudio with Git: [click here](https://jtr13.github.io/cc21/collaborating-on-rstudio-with-github.html)
+-   How to collaborate on Rstudio with Git: [click here](https://jtr13.github.io/cc21/collaborating-on-rstudio-with-github.html)
