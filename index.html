@@ -6,12 +6,11 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.475">
 
   <meta name="author" content="Diego P.F. Trindade">
-  <meta name="dcterms.date" content="2023-11-30">
-  <title>Git(Hub) Workshop for ecologists</title>
+  <title>Git(Hub) for ecologists</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -31,6 +30,7 @@
     }
   </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="adjust.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -322,12 +322,12 @@
     }
   </style>
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="../images/matrix.png" data-background-opacity="0.25" class="quarto-title-block center">
-  <h1 class="title">Git(Hub) Workshop for ecologists</h1>
+<section id="title-slide" data-background-image="./images/ut_logo.svg, ./images/macroeco_logo.png" data-background-position="2% 2%, 98% 5%, center" data-background-size="100px, 200px, cover" class="quarto-title-block center">
+  <h1 class="title">Git(Hub) for ecologists</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -337,38 +337,42 @@ Diego P.F. Trindade
 </div>
 </div>
 
-  <p class="date">11/30/23</p>
+  <p class="date">12/4/23</p>
 </section>
 <section>
-<section id="reproducibility-and-version-control" class="title-slide slide level1 center" data-background-image="./images/reprod.jpeg" data-background-opacity="0.2">
-<h1><span style="color:yellow;">Reproducibility and Version Control</span></h1>
-<div class="footer">
-<div style="text-align:right;">
-<p><a href="https://www.science.org/doi/10.1126/science.354.6308.142">Illustration: Robert Neubecker</a></p>
-</div>
-</div>
-</section>
-<section id="i-use-r-adropbox-why-should-i-care" class="slide level2">
-<h2>I use R + aDropBox, why should I care?</h2>
-<div class="columns">
-<div class="column" style="width:20%;">
+<section id="laelatu-meeting-macroecological-data-and-data-science" class="title-slide slide level1 center" data-background-image="./images/springWG.jpeg" data-background-opacity="0.3">
+<h1><span style="color:#C8F526;font-size:86px">Laelatu meeting: <br>Macroecological data and data science</span></h1>
 
-</div><div class="column" style="width:80%;">
-<br><br> <iframe src="https://giphy.com/embed/pPhyAv5t9V8djyRFJH" width="880" height="550" frameborder="1" class="giphy-embed" allowfullscreen=""></iframe>
-<p>
-<a href="https://giphy.com/gifs/wtf-obama-wth-pPhyAv5t9V8djyRFJH"></a>
-</p>
-</div>
-</div>
 </section>
-<section id="something-like-this-can-happen" class="slide level2">
-<h2>Something like this can happen</h2>
-<p><img data-src="./images/files-comics.gif" class="absolute" style="top: 200px; left: 350px; width: 850px; height: 600px; "></p>
-</section>
-<section id="veryfinal_version2" class="slide level2">
-<h2>Veryfinal_Version2</h2>
+<section id="before-we-start.." class="slide level2">
+<h2>Before we start..</h2>
+<h3 id="a-brief-checklist">A brief checklist:</h3>
+<ul>
+<li><p>Everyone has a github account</p></li>
+<li><p>RStudio and Git are connected</p>
+<ul>
+<li>If not:</li>
+</ul></li>
+</ul>
+<div style="font-size:54px">
+<pre><code>#install.packages("usethis")
 
-<img data-src="./images/phd-comics-version-control.png" class="r-stretch quarto-figure-center"></section>
+usethis::use_git_config(user.name = "yourusername", user.email = "youremail@example.xx")
+
+usethis::create_github_token()
+
+#Copy your PAT
+
+#Run the following line and paste it:
+
+gitcreds::gitcreds_set()
+</code></pre>
+</div>
+</section>
+<section id="not-an-advanced-course" class="slide level2">
+<h2>Not an advanced course</h2>
+<p><img data-src="./images/gitmeme.png" class="absolute" style="top: 100px; left: 450px; width: 650px; height: 1800px; "></p>
+</section>
 <section id="github-in-a-nutshell" class="slide level2" data-background-image="./images/git-commit.png" data-background-opacity="0.15">
 <h2>Git(Hub) in a nutshell</h2>
 <div class="columns">
@@ -391,31 +395,89 @@ Diego P.F. Trindade
 </div>
 </div>
 </section>
+<section id="i-use-r-dropbox-why-should-i-care" class="slide level2">
+<h2>I use R + DropBox, why should I care?</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+
+</div><div class="column" style="width:80%;">
+<p><br><br> <iframe src="https://giphy.com/embed/pPhyAv5t9V8djyRFJH" width="880" height="550" frameborder="1" class="giphy-embed" allowfullscreen=""></iframe></p>
+<p>
+<a href="https://giphy.com/gifs/wtf-obama-wth-pPhyAv5t9V8djyRFJH"></a>
+</p>
+</div>
+</div>
+</section>
+<section id="something-like-this-can-happen" class="slide level2">
+<h2>Something like this can happen</h2>
+<p><img data-src="./images/files-comics.gif" class="absolute" style="top: 200px; left: 350px; width: 850px; height: 600px; "></p>
+</section>
+<section id="veryfinal_version2" class="slide level2">
+<h2>Veryfinal_Version2</h2>
+<p><br> <br></p>
+
+<img data-src="./images/phd-comics-version-control.png" class="r-stretch quarto-figure-center"></section></section>
+<section>
+<section id="reproducibility-and-version-control" class="title-slide slide level1 center" data-background-image="./images/reprod.jpeg" data-background-opacity="0.2">
+<h1><span style="color:yellow;">Reproducibility and Version Control</span></h1>
+<div class="footer">
+<div style="text-align:right;">
+<p><a href="https://www.science.org/doi/10.1126/science.354.6308.142">Illustration: Robert Neubecker</a></p>
+</div>
+</div>
+</section>
 <section id="how-does-git-work" class="slide level2">
 <h2>How does Git work?</h2>
+<p><br> <br></p>
 
 <img data-src="./images/basic-git.jpeg" class="r-stretch quarto-figure-center"></section>
 <section id="how-does-git-work-1" class="slide level2">
 <h2>How does Git work?</h2>
+<p><br> <br></p>
 
 <img data-src="./images/versions.png" class="r-stretch quarto-figure-center"></section>
 <section class="slide level2">
 
 <iframe src="https://www.youtube.com/embed/s3JldKoA0zw?start=4" width="100%" height="100%" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </section>
-<section id="collaborative-git" class="slide level2">
-<h2>Collaborative git</h2>
-<div class="fragment">
-<!-- -->
-<h4 id="always-pull-first">“Always PULL first!”</h4>
-</div>
-
-<img data-src="./images/GitHub-diagram.jpeg" class="r-stretch quarto-figure-center"></section>
-<section id="collaborative-git-1" class="slide level2">
-<h2>Collaborative git</h2>
-
-<img data-src="./images/branch-merge.png" class="r-stretch quarto-figure-center"></section></section>
-<section>
+<section id="why-using-git" class="slide level2">
+<h2>Why using Git?</h2>
+<ul>
+<li><p>A backup of your work!</p></li>
+<li><p>Keep track of all changes, and potentially go back in time if necessary</p></li>
+<li><p>Easy to share your work with others (papers, analyses, functions, packages);</p></li>
+<li><p>Work in collaboration (branches, issues, pull requests).</p></li>
+</ul>
+</section>
+<section id="why-git-rstudio" class="slide level2">
+<h2>Why Git + RStudio?</h2>
+<ul>
+<li><p>Most ecologists use R;</p></li>
+<li><p>RStudio has an easy and well-connected interface with GitHub;</p></li>
+<li><p>Repository/Projects;</p></li>
+<li><p>GitHub act as a “preprint” for R packages or functions.</p></li>
+</ul>
+</section>
+<section id="github-potential-drawbacks" class="slide level2">
+<h2>GitHub potential drawbacks</h2>
+<ul>
+<li><p>Allows files up to 100mb;</p></li>
+<li><p>Simultaneous changes can be problematic;</p></li>
+</ul>
+<aside class="notes">
+<p>not as Google Drive documents</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
 <section id="lets-make-a-quick-tour" class="title-slide slide level1 center" data-background-image="./images/workflow.png" data-background-opacity="0.3">
 <h1><span style="color:#C8F526;">Let’s make a quick tour</span></h1>
 <div class="footer">
@@ -423,6 +485,446 @@ Diego P.F. Trindade
 <p><a href="https://allisonhorst.com/git-github">Illustration: Alisson Horst</a></p>
 </div>
 </div>
+</section>
+
+<section>
+<section id="git-can-be-used-by-yourself-or-as-a-team" class="title-slide slide level1 center">
+<h1>Git can be used by yourself or as a team</h1>
+
+</section>
+<section id="introvert-git-user" class="slide level2">
+<h2>Introvert git user</h2>
+<ul>
+<li><p>You manage your projects alone (on one or multiple machines);</p></li>
+<li><p>You commit, push and pull your own changes (keep track of your changes);</p></li>
+<li><p>It is still fun and safe!</p></li>
+</ul>
+</section></section>
+<section>
+<section id="but..-what-you-mean-by-commit-push-pull" class="title-slide slide level1 center">
+<h1>But.. what you mean by commit, push, pull?!?</h1>
+<aside class="notes">
+<ul>
+<li>Check some old projects</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="lets-see-how-it-works-in-practice" class="slide level2">
+<h2>Let’s see how it works in practice</h2>
+<ul>
+<li><p>Creating a new repository;</p></li>
+<li><p>Connecting this repository to RStudio</p></li>
+</ul>
+</section>
+<section id="lets-see-how-it-works-in-practice-1" class="slide level2">
+<h2>Let’s see how it works in practice</h2>
+<ul>
+<li><p>From GitHub to RStudio</p></li>
+<li><p>From local computer to GitHub</p></li>
+<li><p>Using command line</p></li>
+</ul>
+</section>
+<section id="lets-see-how-it-works-in-practice-2" class="slide level2">
+<h2>Let’s see how it works in practice</h2>
+<ul>
+<li><p><span style="color:#F4BA02;">From GitHub to RStudio</span></p></li>
+<li><p>From local computer to GitHub</p></li>
+<li><p>Using command line</p></li>
+</ul>
+</section>
+<section id="from-github-to-rstudio" class="slide level2">
+<h2>From GitHub to RStudio</h2>
+<ul>
+<li>Super easy, if both are connected</li>
+</ul>
+</section>
+<section id="st-task---lets-create-our-first-test-project" class="slide level2">
+<h2>1st task - let’s create our first test project</h2>
+<ul>
+<li>Clone from GitHub to RStudio</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>README, gitignore,</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="from-command-line" class="slide level2">
+<h2>From command line</h2>
+<p><br></p>
+<div style="font-size:68px;">
+<pre><code>create a repository on github
+
+go to the terminal and choose your folder (cd path)
+
+git init
+git remote add origin &lt;repolink&gt;
+git add .
+git commit -m "first commit"
+git push -u origin main
+</code></pre>
+</div>
+</section></section>
+<section>
+<section id="first-githubs-power---version-control" class="title-slide slide level1 center">
+<h1>First GitHub’s power - Version control</h1>
+
+</section>
+<section id="git-pannel-anatomy" class="slide level2">
+<h2>Git pannel anatomy</h2>
+<ul>
+<li><p><span style="color:#add8e6;">Stage</span>: add changes to be commited (file edits, additions, deletions, etc.);</p></li>
+<li><p><span style="color:#F4BA02;">Commit</span>: Save these changes locally.</p></li>
+</ul>
+<div class="callout callout-tip callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size:48px">
+<p><strong>Always write a meaningful message</strong></p>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li><p><span style="theme-yellow">Pull</span>: Get any new changes made on the GitHub repo, either by you on another machine or your collaborators.</p></li>
+<li><p><span style="color:green;">Push</span>: Push any (committed) local changes to the GitHub repo;</p></li>
+</ul>
+<p>:::</p>
+</section>
+<section id="git-pannel-anatomy-1" class="slide level2">
+<h2>Git pannel anatomy</h2>
+<p><br></p>
+
+<img data-src="./images/git_tab.png" class="r-stretch quarto-figure-center"><div class="footer">
+<div style="text-align:right;">
+<p><a href="https://oliviergimenez.github.io/reproducible-science-workshop/slides/1_github.html#13">Image: Olivier Gimenez</a></p>
+</div>
+</div>
+</section>
+<section id="version-control" class="slide level2">
+<h2>Version control</h2>
+<ul>
+<li><p>Create some fake scripts, edit and save them, commit and push</p></li>
+<li><p>Repeat this process and check what happens</p></li>
+</ul>
+</section>
+<section id="someone-created-a-nice-repository-and-i-wanna-use-it" class="slide level2">
+<h2>Someone created a nice repository and I wanna use it</h2>
+<ul>
+<li><p>Public GitHub repositories can also be cloned</p></li>
+<li><p>A nice strategy to learn new things</p></li>
+<li><p>Very nice when reviewing papers that use GitHub!</p></li>
+</ul>
+</section>
+<section id="nd-task---cloning-repositories" class="slide level2">
+<h2>2nd task - Cloning repositories</h2>
+<ul>
+<li><p>Let’s try to Clone a random nice project on GitHub.</p></li>
+<li><p>Now, make any change to this project, commit and try to push it</p></li>
+</ul>
+<div class="fragment">
+<div style="font-size:48px">
+<div class="callout callout-warning callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>I hope that a wild error appeared!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="clone-and-fork" class="slide level2">
+<h2>Clone and Fork</h2>
+<ul>
+<li><p>Clone: Cloning creates a local version of the original repository;</p></li>
+<li><p>Fork: creates a copy of the repository on your GitHub (which you can then clone)</p></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Let’s now try to first fork and then clone the same repository</li>
+</ul>
+</div>
+</section>
+<section id="rd-task---create-a-project-you-are-currently-working-on" class="slide level2">
+<h2>3rd task - Create a project you are currently working on</h2>
+<ul>
+<li><p>Create a repository on GitHub;</p></li>
+<li><p>Clone it and make a new project in RStudio</p></li>
+<li><p>Copy and paste your folders/scripts into this new projects’ folder</p></li>
+</ul>
+<div class="fragment">
+<div class="callout callout-tip callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><p>If you have large data files:</p></li>
+<li><p>You can try using .RData, .RDS or zip files instead (if they don’t exceed 100mb);</p></li>
+<li><p>Or even, you can use large files locally and .gitignore them!</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="collaborative-git" class="slide level2">
+<h2>Collaborative git</h2>
+<ul>
+<li>The most exciting but challenging one</li>
+</ul>
+<div class="fragment">
+<!-- -->
+<h4 id="always-pull-first">“Always PULL first!”</h4>
+</div>
+
+<img data-src="./images/GitHub-diagram.jpeg" class="r-stretch quarto-figure-center"><aside class="notes">
+<ul>
+<li>Workgroup example</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="issues-canwill-appear-merge-conflicts" class="slide level2">
+<h2>Issues can/will appear! Merge conflicts!</h2>
+<iframe src="https://giphy.com/embed/MCZ39lz83o5lC" width="1080" height="850" frameborder="0" class="giphy-embed" allowfullscreen="">
+</iframe>
+<p>
+<a href="https://giphy.com/gifs/MCZ39lz83o5lC"></a>
+</p>
+</section>
+<section id="collaborative-git-1" class="slide level2">
+<h2>Collaborative git</h2>
+<ul>
+<li><p>You can use/manage your projects using different computers/collaborators</p></li>
+<li><p>Push/Pull issues</p></li>
+</ul>
+</section>
+<section id="th-task---dealing-with-some-issues" class="slide level2">
+<h2>4th task - dealing with some issues</h2>
+<p><br></p>
+<h3 id="st-issue">1st issue:</h3>
+<p><br></p>
+<ul>
+<li><p>Go to GitHub, open your test project and invite a collaborator (person next to you);</p></li>
+<li><p><strong>ask him/her to change a file and push it.</strong></p></li>
+<li><p>Now, don’t pull the changes and try to make new changes to the same file and commit/push it yourself.</p></li>
+</ul>
+<div class="fragment">
+<div style="font-size:48px">
+<div class="callout callout-warning callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>I hope that a wild error appeared!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="why" class="slide level2">
+<h2>Why?</h2>
+<p><br></p>
+<div class="callout callout-important callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size:42px">
+<p><strong>Always PULL first!</strong></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="th-task---dealing-with-some-issues-1" class="slide level2">
+<h2>4th task - dealing with some issues</h2>
+<p><br></p>
+<h3 id="nd-issue-still-an-easy-one">2nd issue (still an easy one):</h3>
+<p><br></p>
+<ul>
+<li><p><strong>ask your collaborator to change a file and “forget” to commit or push it</strong></p></li>
+<li><p>Change yourself the same file (either add or remove anything), commit and push it.</p></li>
+<li><p>Ask your collaborator to commit and push his/her changes.</p></li>
+</ul>
+</section>
+<section id="th-task---dealing-with-some-issues-2" class="slide level2">
+<h2>4th task - dealing with some issues</h2>
+<h3 id="rd-issue-quite-annoying-one">3rd issue (quite annoying one):</h3>
+<ul>
+<li><p><strong>ask your collaborator to change a file, commit this change and “forget” to push it</strong></p></li>
+<li><p>Pull the changes as usual (nothing will happen, everything seems fine)</p></li>
+<li><p>Change the same file yourself (either add or remove anything), commit and push it.</p></li>
+<li><p>Ask your collaborator to push his/her changes after that.</p></li>
+</ul>
+</section>
+<section id="most-issues-can-be-solved-with-pull" class="slide level2">
+<h2>Most issues can be solved with “Pull”</h2>
+<ul>
+<li><p>Sometimes not though</p></li>
+<li><p><a href="https://ohshitgit.com/">Oh Shit Git!</a>, <a href="https://stackoverflow.com/">StackOverflow</a> and <a href="https://openai.com/blog/chatgpt">ChatGPT</a> are our friends</p></li>
+</ul>
+</section></section>
+<section>
+<section id="git-allow-us-to-test-new-things-safely-branches" class="title-slide slide level1 center">
+<h1>Git allow us to test new things safely: <span style="color:red;">Branches!</span></h1>
+
+</section>
+<section id="lets-try-some-branch-approaches" class="slide level2">
+<h2>Let’s try some branch approaches</h2>
+<ul>
+<li><p>Branches can be viewed as experiments;</p></li>
+<li><p>Useful when working in collaboration but also alone;</p></li>
+</ul>
+
+<img data-src="./images/git-branches.png" class="r-stretch quarto-figure-center"></section>
+<section id="working-with-branches-alone" class="slide level2">
+<h2>Working with branches alone</h2>
+<ul>
+<li><p>Pull the changes (no errors, I hope);</p></li>
+<li><p>Create a new branch;</p></li>
+<li><p>Work on this branch</p></li>
+<li><p>Push changes and check your repository on GitHub</p></li>
+<li><p>New Feature: <span style="color:red;">Pull request</span></p></li>
+</ul>
+</section>
+<section id="working-with-branches-as-a-team" class="slide level2">
+<h2>Working with branches as a team</h2>
+</section>
+<section id="issues-pull-request" class="slide level2">
+<h2>Issues + Pull request</h2>
+<ul>
+<li><p>This is how data science is being pushed forward</p></li>
+<li><p>Great when working as a team</p></li>
+<li><p>Let’s try to create some issues and solve them</p></li>
+</ul>
+</section></section>
+<section id="thats-it-the-basic-to-start-using-git-is-done" class="title-slide slide level1 center">
+<h1>That’s it! The basic to start using git is done</h1>
+
+</section>
+
+<section>
+<section id="additional-tips" class="title-slide slide level1 center">
+<h1>Additional tips</h1>
+
+</section>
+<section id="simple-rulescommands-to-avoid-summoning-git-demons" class="slide level2">
+<h2>Simple rules/commands to avoid summoning Git demons</h2>
+<div class="fragment">
+<!-- -->
+<h4 id="always-pull-first-1">“Always PULL first!”</h4>
+</div>
+<ul>
+<li><p>git stash</p></li>
+<li><p>git HEAD~soft</p></li>
+<li><p>git status</p></li>
+</ul>
+</section>
+<section id="less-crucial-but-still-useful-tips" class="slide level2">
+<h2>Less crucial but still useful tips</h2>
+<ul>
+<li><p>How to go back in time?</p></li>
+<li><p>git revert or on GitHub page using SHA (&lt;&gt;)</p></li>
+</ul>
+</section>
+<section id="group-task" class="slide level2">
+<h2>Group task</h2>
+<ul>
+<li><p>5 groups of 4</p></li>
+<li><p>5 different repositories/datasets</p></li>
+</ul>
+</section>
+<section id="st-group-task" class="slide level2">
+<h2>1st Group task</h2>
+<ul>
+<li><p>Let’s explore the data, make changes, commit and push</p></li>
+<li><p>Each person changes a specific script (no overlap!)</p></li>
+<li><p>You can either communicate saying when you pushed so the other person can pull the changes</p></li>
+<li><p>You can also choose not saying anything. Your teammates will receive an error, but since you are working in different files they just need to pull the changes and everything will be fine;</p></li>
+<li><p>All collaborators, change, commit and push their changes and resolve the conflicts (which will be solved simply by pulling)</p></li>
+</ul>
+</section>
+<section id="nd-group-task" class="slide level2">
+<h2>2<sup>nd</sup> Group task</h2>
+<ul>
+<li><p>Let’s continue making changes but now using branches.</p></li>
+<li><p>Each person creates a branch with his/her name</p></li>
+<li><p>Let’s keep working each person in a different script</p></li>
+<li><p>Make changes and pull requests</p></li>
+</ul>
+</section>
+<section id="rd-group-task" class="slide level2">
+<h2>3<sup>rd</sup> Group task</h2>
+<ul>
+<li><p>Let’s try to create some conflict and learn how to solve them.</p></li>
+<li><p>Now, two persons will work on the same script</p></li>
+<li><p>To make things less complicated, each person changes a simple thing (e.g.&nbsp;the label of a plot)</p></li>
+<li><p>They push and try to pull request their changes (and solve the conflicts that will appear)</p></li>
+</ul>
+</section>
+<section id="th-group-task" class="slide level2">
+<h2>4<sup>th</sup> Group task</h2>
+<ul>
+<li><p>Let’s create issues and ask collaborators to solve them.</p></li>
+<li><p>Remember to use the # linked to the issue</p></li>
+</ul>
 </section>
 <section id="sources" class="slide level2">
 <h2>Sources</h2>

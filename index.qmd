@@ -4,6 +4,7 @@ author: "Diego P.F. Trindade"
 date: "today"
 format: 
   revealjs:
+    css: "adjust.css"
     width: 1600
     height: 900
     slide-number: false
@@ -18,7 +19,7 @@ format:
     title-slide-attributes:
       #data-background-color: "#447099"
       data-background-image: "./images/ut_logo.svg, ./images/macroeco_logo.png"
-      data-background-size: 70px, 150px, cover
+      data-background-size: 100px, 200px, cover
       data-background-position: "2% 2%, 98% 5%, center"
 editor: source
 ---
@@ -28,24 +29,24 @@ editor: source
 
 
 ## Before we start..
-<br>
 
 ### A brief checklist:
 
-<br>
 
-1 - Everyone has a github account
 
-- Please log into your github account and fill your username in our list
+* Everyone has a github account
 
-2 -  RStudio and Git are connected
+*  RStudio and Git are connected
 
-- If not:
+    + If not:
 
-<br>
+
+::: {style="font-size:54px"}
 
 ```
-usethis::use_git_config(user.name = "diegoxx", user.email = "diego@example.xx")
+#install.packages("usethis")
+
+usethis::use_git_config(user.name = "yourusername", user.email = "youremail@example.xx")
 
 usethis::create_github_token()
 
@@ -56,7 +57,7 @@ usethis::create_github_token()
 gitcreds::gitcreds_set()
 
 ```
-
+::: 
 
 
 ## Not an advanced course
@@ -115,6 +116,9 @@ Github is a website for your git-versioned files.
 
 ## Veryfinal_Version2
 
+<br>
+<br>
+
 ![](./images/phd-comics-version-control.png){fig-align="center"}
 
 
@@ -129,9 +133,16 @@ Github is a website for your git-versioned files.
 
 ## How does Git work?
 
+<br>
+<br>
+
 ![](./images/basic-git.jpeg){fig-align="center"}
 
 ## How does Git work?
+
+
+<br>
+<br>
 
 ![](./images/versions.png){fig-align="center"}
 
@@ -139,26 +150,40 @@ Github is a website for your git-versioned files.
 
 {{< video https://www.youtube.com/watch?v=s3JldKoA0zw&t=4s&ab_channel=HomerWhite start="4" width="100%" height="100%" >}}
 
+
+## Why using Git?
+
+- A backup of your work!
+
+- Keep track of all changes, and potentially go back in time if necessary
+
+- Easy to share your work with others (papers, analyses, functions, packages);
+
+- Work in collaboration (branches, issues, pull requests).
+
+
 ## Why Git + RStudio?
 
--   Most ecologists use R
+-   Most ecologists use R;
 
--   RStudio has an easy and connected interface with GitHub
+-   RStudio has an easy and well-connected interface with GitHub;
 
--   Repository/Projects
+-   Repository/Projects;
 
-- GitHub act as a "preprint" for R packages
+-   GitHub act as a "preprint" for R packages or functions.
 
 
 ## GitHub potential drawbacks
 
-- Allows files up to 100mb
+- Allows files up to 100mb;
 
-- Simultaneous changes can be problematic
+- Simultaneous changes can be problematic;
 
-- It can be like doing a PhD: 
+:::{.notes}
 
-*At the beginning you have no idea what is going on, but at some point you get it*
+not as Google Drive documents
+
+:::
 
 
 # [Let's make a quick tour]{style="color:#C8F526;"} {background-image="./images/workflow.png" background-opacity="0.3"}
@@ -169,47 +194,77 @@ Github is a website for your git-versioned files.
 :::
 :::
 
-## Git can be used by yourself or as a team
+# Git can be used by yourself or as a team
 
 
-## Introvert git user (myself)
+## Introvert git user
 
--   You manage your projects alone
+-   You manage your projects alone (on one or multiple machines);
 
--   You commit, push and pull your own changes
+-   You commit, push and pull your own changes (keep track of your changes);
 
--   It is still fun!
+-   It is still fun and safe!
+
+
+# But.. what you mean by commit, push, pull?!?
+
+
+::: {.notes}
 
 -   Check some old projects
 
+:::
+
 ## Let's see how it works in practice
 
--   Creating new projects in GitHub
 
--   Connecting this project to RStudio
+-   Creating a new repository;
 
--   This can be done in different ways:
 
--   From GitHub to RStudio
+-   Connecting this repository to RStudio
 
--   From local computer to GitHub
 
--   Using command line
+## Let's see how it works in practice
+
+
+-  From GitHub to RStudio
+
+-  From local computer to GitHub
+
+-  Using command line
+
+## Let's see how it works in practice
+
+
+-  [From GitHub to RStudio]{style="color:#F4BA02;"}
+
+-  From local computer to GitHub
+
+-  Using command line
+
 
 ## From GitHub to RStudio
 
 -   Super easy, if both are connected
 
+
+## 1st task - let's create our first test project
+
+- Clone from GitHub to RStudio
+
+::: {.notes}
+
 - README, gitignore,
 
+:::
 
-## From local to Git
-
--   Let's say you already have a project and wants to send it to Git
-
--   Create a local repository
 
 ## From command line
+
+<br>
+
+:::{style="font-size:68px;"}
+
 
 ```
 create a repository on github
@@ -224,35 +279,70 @@ git push -u origin main
 
 ```
 
-## First GitHub's power - Version control
+:::
 
-- Create new files, edit them, commit and push
 
-## 1st task - let's create our first test project
 
-- I recommend using the first strategy: Clone from GitHub to RStudio
+# First GitHub's power - Version control
 
-- README; .gitignore
 
-- Create some fake scripts, edit them, commit and push
+## Git pannel anatomy
+
+- [Stage]{style="color:#add8e6;"}: add changes to be commited (file edits, additions, deletions, etc.);
+
+
+- [Commit]{style="color:#F4BA02;"}: Save these changes locally. 
+
+
+:::{.callout-tip}
+
+::: {style="font-size:48px"}
+
+**Always write a meaningful message**
+
+:::
+
+:::
+
+
+- [Pull]{style=theme-yellow}: Get any new changes made on the GitHub repo, either by you on another machine or your collaborators. 
+
+
+
+- [Push]{style="color:green;"}: Push any (committed) local changes to the GitHub repo;
+
+:::
+
+## Git pannel anatomy
+
+<br>
+
+![](./images/git_tab.png){fig-align="center"}
+
+::: footer
+::: {style="text-align:right;"}
+[Image: Olivier Gimenez](https://oliviergimenez.github.io/reproducible-science-workshop/slides/1_github.html#13)
+:::
+:::
+
+
+## Version control
+
+
+- Create some fake scripts, edit and save them, commit and push
 
 - Repeat this process and check what happens
 
-## Git pannel labels
-
-stage,
-untracked,
-deleted,
-merged
-
 
 ## Someone created a nice repository and I wanna use it
+
+- Public GitHub repositories can also be cloned
 
 - A nice strategy to learn new things
 
 - Very nice when reviewing papers that use GitHub!
 
-## 2nd task
+## 2nd task - Cloning repositories
 
 - Let's try to Clone a random nice project on GitHub.
 
@@ -263,7 +353,8 @@ merged
 ::: {style="font-size:48px"}
 
 ::: {.callout-warning}
-A wild error appeared!
+
+I hope that a wild error appeared!
 
 ::: 
 ::: 
@@ -277,37 +368,32 @@ A wild error appeared!
 
 ::: fragment
 
-- Let's now try to fork the same repository
+- Let's now try to first fork and then clone the same repository
 
 :::
 
 ## 3rd task - Create a project you are currently working on
 
-- Create a repository on GitHub and new project on RStudio and play a bit with it
+- Create a repository on GitHub;
+
+- Clone it and make a new project in RStudio
+
+- Copy and paste your folders/scripts into this new projects' folder
 
 
 ::: fragment
 
 ::: {.callout-tip}
 
-
-::: {style="font-size:36px"}
-
-If you have large data files:
-
-:::
-
-<br>
+- If you have large data files:
 
 - You can try using .RData, .RDS or zip files instead (if they don't exceed 100mb);
-
-<br>
 
 - Or even, you can use large files locally and .gitignore them!
 
 :::
-:::
 
+:::
 
 ## Collaborative git
 
@@ -318,6 +404,11 @@ If you have large data files:
 :::
 
 ![](./images/GitHub-diagram.jpeg){fig-align="center"}
+
+
+::: {.notes}
+- Workgroup example
+:::
 
 ## Issues can/will appear! Merge conflicts!
 
@@ -340,18 +431,29 @@ If you have large data files:
 
 <br>
 
-- Go to GitHub, open your first project and invite a collaborator (person next to you)
+- Go to GitHub, open your test project and invite a collaborator (person next to you);
 
 - **ask him/her to change a file and push it.**
 
-- Now, don't pull the changes and try to make new changes to the same file and commit/push the same script yourself.
+- Now, don't pull the changes and try to make new changes to the same file and commit/push it yourself.
+
+::: fragment
+
+::: {style="font-size:48px"}
+
+::: {.callout-warning}
+
+I hope that a wild error appeared!
+
+::: 
+::: 
+::: 
 
 
 ## Why?
 
-- This happens when we try to change a pushed file without pulling it
 
-::: fragment
+<br>
 
 ::: {.callout-important}
 
@@ -360,15 +462,15 @@ If you have large data files:
 **Always PULL first!**
 :::
 
-:::
 
 :::
+
 
 ## 4th task - dealing with some issues
 
 <br>
 
-### 2nd issue (still easy one):
+### 2nd issue (still an easy one):
 
 <br>
 
@@ -381,7 +483,7 @@ If you have large data files:
 
 ## 4th task - dealing with some issues
 
-3rd issue (quite annoying one):
+### 3rd issue (quite annoying one):
 
 - **ask your collaborator to change a file, commit this change and "forget" to push it**
 
@@ -398,22 +500,71 @@ If you have large data files:
 - [Oh Shit Git!](https://ohshitgit.com/), [StackOverflow](https://stackoverflow.com/) and [ChatGPT](https://openai.com/blog/chatgpt) are our friends
 
 
-## Most importantly: Git allow us to test new things safely
-
-![](./images/branch-merge.png){fig-align="center"}
+# Git allow us to test new things safely: [Branches!]{style="color:red;"}
 
 
 ## Let's try some branch approaches
 
-- Branches can be viewed as experiments
 
-- New feature: Pull request
+- Branches can be viewed as experiments;
+
+- Useful when working in collaboration but also alone;
+
+
+![](./images/git-branches.png){fig-align="center"}
+
+## Working with branches alone
+
+- Pull the changes (no errors, I hope);
+
+- Create a new branch;
+
+- Work on this branch
+
+- Push changes and check your repository on GitHub
+
+- New Feature: [Pull request]{style="color:red;"}
+
+
+## Working with branches as a team
 
 
 
 ## Issues + Pull request
 
 - This is how data science is being pushed forward
+
+- Great when working as a team
+
+- Let's try to create some issues and solve them
+
+# That's it! The basic to start using git is done
+
+
+# Additional tips 
+
+## Simple rules/commands to avoid summoning Git demons
+
+::: fragment
+#### "Always PULL first!"
+:::
+
+-   git stash
+
+-   git HEAD\~soft
+
+-   git status
+
+
+## Less crucial but still useful tips
+
+
+- How to go back in time?
+
+
+- git revert or on GitHub page using SHA (<>)
+
+
 
 
 ## Group task
@@ -432,13 +583,13 @@ If you have large data files:
 
 - You can either communicate saying when you pushed so the other person can pull the changes
 
-- You can also choose not saying anything.
+- You can also choose not saying anything. Your teammates will receive an error, but since you are working in different files they just need to pull the changes and everything will be fine;
 
 - All collaborators, change, commit and push their changes and resolve the conflicts (which will be solved simply by pulling)
 
 
 
-## 2nd Group task
+## 2^nd^ Group task
 
 - Let's continue making changes but now using branches.
 
@@ -450,7 +601,7 @@ If you have large data files:
 
 
 
-## 3rd Group task
+## 3^rd^ Group task
 
 - Let's try to create some conflict and learn how to solve them.
 
@@ -461,7 +612,7 @@ If you have large data files:
 - They push and try to pull request their changes (and solve the conflicts that will appear)
 
 
-## 4th Group task
+## 4^th^ Group task
 
 - Let's create issues and ask collaborators to solve them.
 
@@ -469,19 +620,7 @@ If you have large data files:
 
 
 
-# Additional tips 
 
-## Simple rules/commands to save your life
-
-::: fragment
-#### "Always PULL first!"
-:::
-
--   git stash
-
--   git HEAD\~soft
-
--   git status
 
 
 
