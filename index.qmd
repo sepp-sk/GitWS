@@ -20,7 +20,7 @@ format:
     preview-links: auto
     title-slide-attributes:
       #data-background-color: "#447099"
-      data-background-image: "./images/ut_logo.svg, ./images/macroeco_logo.png"
+      data-background-image: "../images/ut_logo.svg, ../images/macroeco_logo.png"
       data-background-size: 120px, 300px, cover
       data-background-position: "2% 2%, 98% 5%, center"
 editor: source
