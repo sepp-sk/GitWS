@@ -461,26 +461,13 @@ gitcreds::gitcreds_set()
 <li><p>GitHub act as a “preprint” for R packages or functions.</p></li>
 </ul>
 </section>
-<section id="github-potential-drawbacks" class="slide level2">
-<h2>GitHub potential drawbacks</h2>
+<section id="potential-drawbacks" class="slide level2">
+<h2>Potential drawbacks</h2>
 <ul>
 <li><p>Allows files up to 100mb;</p></li>
 <li><p>Simultaneous changes can be problematic;</p></li>
 <li><p>GitHub demons are always awaiting to be summoned.</p></li>
 </ul>
-<aside class="notes">
-<p>not as Google Drive documents</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section></section>
 <section>
 <section id="git-can-be-used-by-yourself-or-as-a-team" class="title-slide slide level1 center">
@@ -523,38 +510,17 @@ gitcreds::gitcreds_set()
 <section id="lets-see-how-it-works-in-practice-2" class="slide level2">
 <h2>Let’s see how it works in practice</h2>
 <ul>
-<li><p><span style="color:#F4BA02;">From GitHub to RStudio</span></p></li>
-<li><p>From local computer to GitHub</p></li>
-<li><p>Using command line</p></li>
+<li><p><span style="color:#F4BA02;">From GitHub to RStudio</span>;</p></li>
+<li><p>From local computer to GitHub;</p></li>
+<li><p>Using command line.</p></li>
 </ul>
-</section>
-<section id="from-github-to-rstudio" class="slide level2">
-<h2>From GitHub to RStudio</h2>
-<ul>
-<li>Super easy, if both are connected</li>
-</ul>
-<aside class="notes">
-<ul>
-<li>Explain RStudio projects/Repositories</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="st-task---lets-create-our-first-repository" class="slide level2">
-<h2>1st task - let’s create our first repository</h2>
+<h2>1<sup>st</sup> task - let’s create our first repository</h2>
 <ul>
-<li><p>Create a new repository on GitHub</p></li>
-<li><p>Create a new project in RStudio using version control</p></li>
-<li><p>Clone your GitHub repository and connect it to RStudio</p></li>
+<li><p>Creating a new repository on GitHub;</p></li>
+<li><p>Creating a new project in RStudio using version control;</p></li>
+<li><p>Cloning your GitHub repository and connecting it to RStudio.</p></li>
 </ul>
 <div class="fragment">
 <div class="callout callout-warning callout-titled callout-style-default">
@@ -589,8 +555,8 @@ gitcreds::gitcreds_set()
           display:block!important;
       }</style></aside>
 </section>
-<section id="from-command-line" class="slide level2">
-<h2>From command line</h2>
+<section id="from-the-command-line" class="slide level2">
+<h2>From the command line</h2>
 <div style="font-size:48px;">
 <pre><code>create a repository on github
 
@@ -615,8 +581,8 @@ echo "# My project's README" &gt;&gt; README.md
 <section id="version-control" class="slide level2">
 <h2>Version control</h2>
 <ul>
-<li><p>Let’s create some scripts, edit and save them, commit and push</p></li>
-<li><p>Repeat this process and check what happens</p></li>
+<li><p>Let’s create some scripts, edit and save them, commit and push;</p></li>
+<li><p>Repeat this process and check what happens.</p></li>
 </ul>
 </section>
 <section id="git-pannel-anatomy" class="slide level2">
@@ -633,8 +599,8 @@ echo "# My project's README" &gt;&gt; README.md
 <h2>2<sup>nd</sup> task - Create a project you are currently working on</h2>
 <ul>
 <li><p>Create a repository on GitHub;</p></li>
-<li><p>Clone it and make a new project in RStudio</p></li>
-<li><p>Copy and paste your folders/scripts into this new projects’ folder</p></li>
+<li><p>Clone it and make a new project in RStudio;</p></li>
+<li><p>Copy and paste your folders/scripts into this new projects’ folder.</p></li>
 </ul>
 <div class="fragment">
 <ul>
@@ -652,7 +618,6 @@ echo "# My project's README" &gt;&gt; README.md
 <li><p>Public GitHub repositories can also be cloned;</p></li>
 <li><p>A nice strategy to learn new things;</p></li>
 <li><p>Very convenient when reviewing papers that use GitHub!</p></li>
-<li><p>More advanced users, use that approach to improve someone’s package/functions</p></li>
 </ul>
 </section>
 <section id="rd-task---cloning-a-repository" class="slide level2">
@@ -662,7 +627,7 @@ echo "# My project's README" &gt;&gt; README.md
 </ul>
 <div class="fragment">
 <ul>
-<li>Now, make any change to this project, commit and try to push it</li>
+<li>Now, make any change to this project, commit and try to push it.</li>
 </ul>
 </div>
 <div class="fragment">
@@ -687,11 +652,12 @@ echo "# My project's README" &gt;&gt; README.md
 <h2>Clone and Fork</h2>
 <ul>
 <li><p>Clone: creates a local version of the original repository;</p></li>
-<li><p>Fork: creates a copy of the repository on your GitHub (which you can then clone)</p></li>
+<li><p>Fork: creates a copy of the repository on your GitHub (which you can then clone);</p></li>
+<li><p>More advanced users use that approach to improve someone’s package/functions.</p></li>
 </ul>
 <div class="fragment">
 <ul>
-<li>Let’s now try to first fork and then clone the same repository</li>
+<li>Let’s now try to fork and then clone the same repository.</li>
 </ul>
 </div>
 </section></section>
@@ -731,20 +697,13 @@ echo "# My project's README" &gt;&gt; README.md
 <a href="https://giphy.com/gifs/MCZ39lz83o5lC"></a>
 </p>
 </section>
-<section id="collaborative-git-1" class="slide level2">
-<h2>Collaborative git</h2>
-<ul>
-<li><p>You can manage your projects using different machines/collaborators</p></li>
-<li><p>Push/Pull issues</p></li>
-</ul>
-</section>
-<section id="th-task---dealing-with-some-issues" class="slide level2">
-<h2>4th task - dealing with some issues</h2>
+<section id="dealing-with-some-simplecommon-issues" class="slide level2">
+<h2>Dealing with some simple/common issues</h2>
 <p><br></p>
 <h3 id="st-issue">1st issue:</h3>
 <ul>
 <li><p>Go to GitHub, create a new repository, connect it to RStudio and invite a collaborator (person next to you);</p></li>
-<li><p><strong>ask him/her to change a file and push it.</strong></p></li>
+<li><p><strong>Ask him/her to change a file and push it.</strong></p></li>
 <li><p>Now, don’t pull the changes and try to make new changes to the same file and commit/push it yourself.</p></li>
 </ul>
 <div class="fragment">
@@ -782,25 +741,16 @@ echo "# My project's README" &gt;&gt; README.md
 </div>
 </div>
 </section>
-<section id="nd-issue-still-an-easy-one" class="slide level2">
-<h2>2nd issue (still an easy one):</h2>
+<section id="nd-issue" class="slide level2">
+<h2>2nd issue:</h2>
 <ul>
-<li><p><strong>ask your collaborator to change a file and “forget” to commit or push it</strong></p></li>
-<li><p>Change yourself the same file (either add or remove anything), commit and push it.</p></li>
+<li><p><strong>Ask your collaborator to change a file and “forget” to commit or push it</strong>;</p></li>
+<li><p>Change the same file yourself (either add or remove anything), commit and push it;</p></li>
 <li><p>Ask your collaborator to commit and push his/her changes.</p></li>
 </ul>
 </section>
-<section id="rd-issue-quite-annoying-one" class="slide level2">
-<h2>3rd issue (quite annoying one):</h2>
-<ul>
-<li><p><strong>ask your collaborator to change a file, commit this change and “forget” to push it</strong></p></li>
-<li><p>Pull the changes as usual (nothing will happen, everything seems fine)</p></li>
-<li><p>Change the same file yourself (either add or remove anything), commit and push it.</p></li>
-<li><p>Ask your collaborator to push his/her changes after that.</p></li>
-</ul>
-</section>
-<section id="most-issues-can-be-solved-with-pull" class="slide level2">
-<h2>Most issues can be solved with “Pull”</h2>
+<section id="most-simple-issues-can-be-solved-with-pull" class="slide level2">
+<h2>Most simple issues can be solved with “Pull”</h2>
 <ul>
 <li><p>Sometimes not though;</p></li>
 <li><p><a href="https://ohshitgit.com/">Oh Shit Git!</a>, <a href="https://stackoverflow.com/">StackOverflow</a> and <a href="https://openai.com/blog/chatgpt">ChatGPT</a> are our friends</p></li>
@@ -819,19 +769,38 @@ echo "# My project's README" &gt;&gt; README.md
 </ul>
 
 <img data-src="./images/git-branches.png" class="r-stretch quarto-figure-center"></section>
+<section id="working-as-a-team-with-branches" class="slide level2">
+<h2>Working as a team with branches</h2>
+<ul>
+<li><p>Pull the changes;</p></li>
+<li><p>Create a new branch;</p></li>
+<li><p>Create a new script inside of this branch and work on it;</p></li>
+<li><p>Push the changes and check your repository on GitHub;</p></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>New Feature: <span style="color:red;">Pull request</span></li>
+</ul>
+</div>
+</section>
+<section id="mergin-conflicts" class="slide level2">
+<h2>Mergin conflicts</h2>
+<ul>
+<li><p>When two people work in separate branches but in the same file, conflicts will happen.</p>
+<ul>
+<li><p>You and your colleague will create a new branch;</p></li>
+<li><p>You both will work on the same script but in separate branches;</p></li>
+<li><p>Push the changes and check your repository on GitHub;</p></li>
+</ul></li>
+</ul>
+</section>
 <section id="working-alone-with-branches" class="slide level2">
 <h2>Working alone with branches</h2>
 <ul>
-<li><p>Pull the changes (no errors, I hope);</p></li>
-<li><p>Create a new branch;</p></li>
-<li><p>Work on this branch</p></li>
-<li><p>Push changes and check your repository on GitHub</p></li>
-<li><p>New Feature: <span style="color:red;">Pull request</span></p></li>
+<li>The same can be done when working alone</li>
 </ul>
-</section>
-<section id="working-as-a-team-with-branches" class="slide level2">
-<h2>Working as a team with branches</h2>
-</section>
+
+<img data-src="./images/git-branches.png" class="r-stretch quarto-figure-center"></section>
 <section id="issues-pull-request" class="slide level2">
 <h2>Issues + Pull request</h2>
 <ul>
@@ -840,8 +809,8 @@ echo "# My project's README" &gt;&gt; README.md
 <li><p>Let’s try to create some issues and solve them.</p></li>
 </ul>
 </section></section>
-<section id="thats-it-the-basic-tool-kit-to-start-using-git-is-ready" class="title-slide slide level1 center">
-<h1>That’s it! The basic tool kit to start using git is ready</h1>
+<section id="thats-it-the-basic-toolkit-to-start-using-git-is-ready" class="title-slide slide level1 center">
+<h1>That’s it! The basic toolkit to start using git is ready</h1>
 
 </section>
 
@@ -872,16 +841,20 @@ echo "# My project's README" &gt;&gt; README.md
 <h1>Group task</h1>
 
 </section>
-<section id="lets-make-small-groups-maybe-4-people-per-group" class="slide level2">
-<h2>Let’s make small groups (maybe 4 people per group?)</h2>
+<section id="lets-create-small-groups" class="slide level2">
+<h2>Let’s create small groups</h2>
 <ul>
-<li>5 different repositories/datasets</li>
+<li><p>Group 1: Survey of birds that visit backyards, nature centers, community areas, and other locales in North America;</p></li>
+<li><p>Group 2: Erasmus student data;</p></li>
+<li><p>Group 3: Bee colonies in the US;</p></li>
+<li><p>Group 4: Baby names over time;</p></li>
+<li><p>Group 5: Palmer penguins data.</p></li>
 </ul>
 </section>
 <section id="st-group-task" class="slide level2">
 <h2>1<sup>st</sup> Group task:</h2>
 <ul>
-<li><p>Let’s explore the data, make changes, commit and push</p></li>
+<li><p>Let’s explore the data/scripts, make changes, commit and push</p></li>
 <li><p>Each person changes a specific file (no overlap!)</p></li>
 <li><p>You can either communicate saying when you pushed so the other person can pull the changes</p></li>
 <li><p>You can also choose not saying anything. Your teammates will receive an error, but since you are working on different files they just need to pull the changes and everything will be fine;</p></li>
@@ -900,7 +873,7 @@ echo "# My project's README" &gt;&gt; README.md
 <section id="rd-group-task" class="slide level2">
 <h2>3<sup>rd</sup> Group task:</h2>
 <ul>
-<li><p>Let’s try to create some conflict and learn how to solve them.</p></li>
+<li><p>Let’s try to create some conflicts and learn how to solve them.</p></li>
 <li><p>Now, two persons will work on the same script</p></li>
 <li><p>To make things less complicated, each person changes a simple thing (e.g.&nbsp;the label of a plot)</p></li>
 <li><p>They push and try to pull request their changes (and solve the conflicts that will appear)</p></li>
@@ -916,9 +889,22 @@ echo "# My project's README" &gt;&gt; README.md
 <section id="take-home-messages" class="slide level2">
 <h2>Take-home messages</h2>
 <ul>
-<li><p>I hope you agree that git is a great tool</p></li>
-<li><p>When used in collaborations, communication is key</p></li>
+<li><p>I hope you agree that git is a great tool for both using it alone or as a team;</p></li>
+<li><p>When used in collaborations, communication is key;</p></li>
+<li><p>All git issues can be solved;</p></li>
+<li><p>If not, or too complicated, just burn it down and continue from where it was working previously.</p></li>
 </ul>
+</section>
+<section class="slide level2">
+
+<div class="column" style="width:15%;">
+
+</div>
+<iframe src="https://giphy.com/embed/xUPOqo6E1XvWXwlCyQ" width="1080" height="870" frameborder="0" class="giphy-embed" allowfullscreen="">
+</iframe>
+<p>
+<a href="https://giphy.com/gifs/spacejam-space-jam-movie-xUPOqo6E1XvWXwlCyQ"></a>
+</p>
 </section>
 <section id="sources" class="slide level2">
 <h2>Sources</h2>

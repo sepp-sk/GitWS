@@ -175,20 +175,13 @@ Github is a website for your git-versioned files.
 -   GitHub act as a "preprint" for R packages or functions.
 
 
-## GitHub potential drawbacks
+## Potential drawbacks
 
 - Allows files up to 100mb;
 
 - Simultaneous changes can be problematic;
 
 - GitHub demons are always awaiting to be summoned.
-
-:::{.notes}
-
-not as Google Drive documents
-
-:::
-
 
 
 # Git can be used by yourself or as a team
@@ -237,31 +230,21 @@ not as Google Drive documents
 ## Let's see how it works in practice
 
 
--  [From GitHub to RStudio]{style="color:#F4BA02;"}
+-  [From GitHub to RStudio]{style="color:#F4BA02;"};
 
--  From local computer to GitHub
+-  From local computer to GitHub;
 
--  Using command line
-
-
-## From GitHub to RStudio
-
--   Super easy, if both are connected
-
-::: {.notes}
-
-- Explain RStudio projects/Repositories
-
-:::
-
-## 1st task - let's create our first repository
+-  Using command line.
 
 
-- Create a new repository on GitHub
+## 1^st^ task - let's create our first repository
 
-- Create a new project in RStudio using version control
 
-- Clone your GitHub repository and connect it to RStudio
+- Creating a new repository on GitHub;
+
+- Creating a new project in RStudio using version control;
+
+- Cloning your GitHub repository and connecting it to RStudio.
 
 ::: fragment
 ::: {.callout-warning}
@@ -278,7 +261,7 @@ not as Google Drive documents
 :::
 
 
-## From command line
+## From the command line
 
 
 :::{style="font-size:48px;"}
@@ -310,9 +293,9 @@ echo "# My project's README" >> README.md
 ## Version control
 
 
-- Let's create some scripts, edit and save them, commit and push
+- Let's create some scripts, edit and save them, commit and push;
 
-- Repeat this process and check what happens
+- Repeat this process and check what happens.
 
 
 ## Git pannel anatomy
@@ -332,9 +315,9 @@ echo "# My project's README" >> README.md
 
 - Create a repository on GitHub;
 
-- Clone it and make a new project in RStudio
+- Clone it and make a new project in RStudio;
 
-- Copy and paste your folders/scripts into this new projects' folder
+- Copy and paste your folders/scripts into this new projects' folder.
 
 ::: fragment
 
@@ -354,7 +337,6 @@ echo "# My project's README" >> README.md
 
 - Very convenient when reviewing papers that use GitHub!
 
-- More advanced users, use that approach to improve someone's package/functions
 
 
 ## 3^rd^ task - Cloning a repository
@@ -363,7 +345,7 @@ echo "# My project's README" >> README.md
 
 ::: fragment
 
-- Now, make any change to this project, commit and try to push it
+- Now, make any change to this project, commit and try to push it.
 
 ::: 
 
@@ -383,11 +365,13 @@ I hope that a wild error appeared!
 
 - Clone: creates a local version of the original repository;
 
-- Fork: creates a copy of the repository on your GitHub (which you can then clone)
+- Fork: creates a copy of the repository on your GitHub (which you can then clone);
+
+- More advanced users use that approach to improve someone's package/functions.
 
 ::: fragment
 
-- Let's now try to first fork and then clone the same repository
+- Let's now try to fork and then clone the same repository.
 
 :::
 
@@ -412,13 +396,7 @@ I hope that a wild error appeared!
 
 
 
-## Collaborative git
-
--   You can manage your projects using different machines/collaborators
-
--   Push/Pull issues
-
-## 4th task - dealing with some issues
+## Dealing with some simple/common issues
 
 <br>
 
@@ -426,7 +404,7 @@ I hope that a wild error appeared!
 
 - Go to GitHub, create a new repository, connect it to RStudio and invite a collaborator (person next to you);
 
-- **ask him/her to change a file and push it.**
+- **Ask him/her to change a file and push it.**
 
 - Now, don't pull the changes and try to make new changes to the same file and commit/push it yourself.
 
@@ -456,26 +434,16 @@ I hope that a wild error appeared!
 :::
 
 
-## 2nd issue (still an easy one):
+## 2nd issue:
 
-- **ask your collaborator to change a file and "forget" to commit or push it**
+- **Ask your collaborator to change a file and "forget" to commit or push it**;
 
-- Change yourself the same file (either add or remove anything), commit and push it.
+- Change the same file yourself (either add or remove anything), commit and push it;
 
 - Ask your collaborator to commit and push his/her changes.
 
 
-## 3rd issue (quite annoying one):
-
-- **ask your collaborator to change a file, commit this change and "forget" to push it**
-
-- Pull the changes as usual (nothing will happen, everything seems fine)
-
-- Change the same file yourself (either add or remove anything), commit and push it.
-
-- Ask your collaborator to push his/her changes after that.
-
-## Most issues can be solved with "Pull"
+## Most simple issues can be solved with "Pull"
 
 - Sometimes not though;
 
@@ -494,22 +462,40 @@ I hope that a wild error appeared!
 
 ![](./images/git-branches.png){fig-align="center"}
 
-## Working alone with branches
-
-- Pull the changes (no errors, I hope);
-
-- Create a new branch;
-
-- Work on this branch
-
-- Push changes and check your repository on GitHub
-
-- New Feature: [Pull request]{style="color:red;"}
-
 
 ## Working as a team with branches
 
+- Pull the changes;
 
+- Create a new branch;
+
+- Create a new script inside of this branch and work on it;
+
+- Push the changes and check your repository on GitHub;
+
+
+:::fragment
+
+- New Feature: [Pull request]{style="color:red;"}
+
+:::
+
+## Mergin conflicts
+
+- When two people work in separate branches but in the same file, conflicts will happen.
+
+  - You and your colleague will create a new branch;
+
+  - You both will work on the same script but in separate branches;
+
+  - Push the changes and check your repository on GitHub;
+
+## Working alone with branches
+
+- The same can be done when working alone
+
+
+![](./images/git-branches.png){fig-align="center"}
 
 ## Issues + Pull request
 
@@ -520,7 +506,7 @@ I hope that a wild error appeared!
 - Let's try to create some issues and solve them.
 
 
-# That's it! The basic tool kit to start using git is ready
+# That's it! The basic toolkit to start using git is ready
 
 
 # Additional tips 
@@ -544,16 +530,23 @@ I hope that a wild error appeared!
 
 # Group task
 
-## Let's make small groups (maybe 4 people per group?)
+## Let's create small groups
 
+- Group 1: Survey of birds that visit backyards, nature centers, community areas, and other locales in North America;
 
-- 5 different repositories/datasets
+- Group 2: Erasmus student data;
+
+- Group 3: Bee colonies in the US;
+
+- Group 4: Baby names over time;
+
+- Group 5: Palmer penguins data.
 
 
 
 ## 1^st^ Group task:
 
-- Let's explore the data, make changes, commit and push
+- Let's explore the data/scripts, make changes, commit and push
 
 - Each person changes a specific file (no overlap!)
 
@@ -577,7 +570,7 @@ I hope that a wild error appeared!
 
 ## 3^rd^ Group task:
 
-- Let's try to create some conflict and learn how to solve them.
+- Let's try to create some conflicts and learn how to solve them.
 
 - Now, two persons will work on the same script
 
@@ -596,10 +589,21 @@ I hope that a wild error appeared!
 
 ## Take-home messages
 
-- I hope you agree that git is a great tool
+- I hope you agree that git is a great tool for both using it alone or as a team;
 
-- When used in collaborations, communication is key
+- When used in collaborations, communication is key;
 
+- All git issues can be solved;
+
+- If not, or too complicated, just burn it down and continue from where it was working previously.
+
+----
+
+::: {.column width="15%"}
+
+:::
+
+<iframe src="https://giphy.com/embed/xUPOqo6E1XvWXwlCyQ" width="1080" height="870" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/spacejam-space-jam-movie-xUPOqo6E1XvWXwlCyQ"></a></p>
 
 
 ## Sources
