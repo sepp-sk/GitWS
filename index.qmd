@@ -29,6 +29,7 @@ editor: source
 
 
 ## Before we start...
+* PLANTECOLOGY RULES!
 
 * Everyone has a github account
 
